@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig', #추가 됨 
-    'blog.apps.BlogConfig',
+    'blog.apps.BlogConfig', #added
 ]
 
 MIDDLEWARE = [
@@ -79,7 +79,8 @@ WSGI_APPLICATION = 'ch1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
